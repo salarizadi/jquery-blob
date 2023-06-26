@@ -4,7 +4,7 @@ File address to blob, support all file formats
 # Example
 
 ```js
- $.blob({
+$.blob({
   url: "http://localhost/image.png",
   progress: percent => {
      console.log("Percent", percent)
