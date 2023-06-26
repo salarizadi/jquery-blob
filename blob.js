@@ -1,7 +1,7 @@
 /**
  *  Copyright (c) 2023
  *  @Version    : 1.0.0
- *  @Repository : https://github.com/salarizadi/blurCTX
+ *  @Repository : https://github.com/salarizadi/jquery-blob/edit/main/blob.js
  *  @Author     : https://salarizadi.github.io
  *
  * $.blob({
