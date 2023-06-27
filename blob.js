@@ -7,10 +7,10 @@
  * $.blob({
  *     url: "http://localhost/image.png",
  *     progress: percent => {
- *         console.log("percent", percent)
+ *         console.log("Percent", percent)
  *     },
  *     loader : xhr => {
- *         console.log("loading", xhr)
+ *         console.log("Loading", xhr)
  *     },
  *     success: result => {
  *         console.log("Success : ", result)
@@ -64,7 +64,13 @@
                 return xhr;
             },
             beforeSend : options.loader,
-            success    : result => options.success((window.URL || window.webkitURL).createObjectURL(result)),
+            success    : result => {
+                try {
+                    options.success((window.URL || window.webkitURL).createObjectURL(result))
+                } catch ( e ) {
+                    options.error(e)
+                }
+            },
             error      : xhr    => options.error(xhr)
         });
     }
